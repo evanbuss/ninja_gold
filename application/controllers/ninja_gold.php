@@ -16,11 +16,10 @@ class Ninja_Gold extends CI_Controller
 	public function logout()
 	{
 		$this->session->sess_destroy();
-		redirect('index');
+		redirect('/');
 	}
 	public function process_money()
 	{
-
 		$building = $this->input->post('building');
 		if(empty($this->session->userdata('message')))
 		{
@@ -76,7 +75,7 @@ class Ninja_Gold extends CI_Controller
 				$this->session->set_userdata('message',$messages);
 				}
 		} 
-		redirect('index');
+		redirect('/');
 
 	}
 }

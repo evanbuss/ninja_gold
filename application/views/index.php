@@ -1,8 +1,3 @@
-<?php 
-// var_dump($this->session->userdata('message'));
-// $this->session->sess_destroy();
- ?>
-
 <html>
 <head>
 	<title>Ninja Gold</title>
@@ -114,14 +109,14 @@
 			</div>
 
 		
-			<a href="ninja_gold/logout"><button class="reset"> Reset</button></a>
+			<a href="/ninja_gold/logout"><button class="reset"> Reset</button></a>
 		
 
 			<br>
 		<!-- farm -->
 		<div class="box">
 			<h4> Farm </h4>
-			<form action="/process_money" method="post">
+			<form action="/ninja_gold/process_money" method="post">
 				<input type="hidden" name="building" value="farm" />
 				<input class="shaddow" type="submit" value="Find Gold!"/>
 			</form>
@@ -129,7 +124,7 @@
 		<!-- cave -->
 		<div class="box">
 			<h4> Cave </h4> 
-			<form action="/process_money" method="post">
+			<form action="/ninja_gold/process_money" method="post">
 				<input type="hidden" name="building" value="cave" />
 				<input class="shaddow" type="submit" value="Find Gold!"/>
 			</form>
@@ -137,7 +132,7 @@
 		<!-- house -->
 		<div class="box">
 			<h4> House </h4>
-			<form action="/process_money" method="post">
+			<form action="/ninja_gold/process_money" method="post">
 				<input type="hidden" name="building" value="house" />
 				<input class="shaddow" type="submit" value="Find Gold!"/>
 			</form>
@@ -145,7 +140,7 @@
 		<!-- casino -->
 		<div class="box">
 			<h4> Casino </h4>
-			<form action="/process_money" method="post">
+			<form action="/ninja_gold/process_money" method="post">
 				<input type="hidden" name="building" value="casino" />
 				<input class="shaddow" type="submit" value="Find Gold!"/>
 			</form>
