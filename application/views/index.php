@@ -1,14 +1,13 @@
 <html>
 <head>
 	<title>Ninja Gold</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/skeleton.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/skeleton.css">
    	<style type="text/css">
 
    	div h4 {
    		text-align: center;
    	}
-
    	input {
    		margin-left: 30px;
    		margin-top: 20px;
@@ -153,13 +152,16 @@
 		<h6> Activities: </h6>
 		<div class="activ">
             <?php 
-               $messages = array_reverse($this->session->userdata('message'));
-
-               foreach ($messages as $value) 
-               {
-                  echo $value . '<br>';      
+               $message = $this->session->userdata('message');
+               $messages = array_reverse($message);
+                  if(!empty($messages)) {
+                  foreach ($messages as $value) 
+                  {
+                     echo $value . '<br>';      
+                  }
                }
-
+               else {
+                  echo "Start Playing Ninja Gold !";            }
              ?>
 		</div>
 

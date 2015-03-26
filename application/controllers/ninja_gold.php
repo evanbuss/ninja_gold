@@ -6,7 +6,7 @@ class Ninja_Gold extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		// $this->output->enable_profiler();
+		 $this->output->enable_profiler();
 	}
 
 	public function index()
@@ -75,7 +75,7 @@ class Ninja_Gold extends CI_Controller
 				$this->session->set_userdata('message',$messages);
 				}
 		} 
-		redirect('/');
+		$this->load->view('index');
 
 	}
 }
